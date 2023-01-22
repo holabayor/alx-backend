@@ -2,7 +2,7 @@
 ''' Hypermedia Pagination '''
 import csv
 import math
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 
 
 def index_range(page: int, page_size: int) -> Tuple:
@@ -51,7 +51,7 @@ class Server:
         except IndexError:
             return []
 
-    def get_hyper(self, page: int = 1, page_size: int = 10):
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         '''
             method that takes the same arguments (and defaults)
             as get_page and returns a dictionary
