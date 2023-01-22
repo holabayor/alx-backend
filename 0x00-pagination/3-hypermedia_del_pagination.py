@@ -51,7 +51,6 @@ class Server:
             print(dataset.get(start_index))
             start_index += 1
 
-
         data = dataset.get(index)
         return {
             'index': index,
