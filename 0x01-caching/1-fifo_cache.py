@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-'''Basic Dictionary'''
+'''FIFO Dictionary'''
+from collections import deque
 from base_caching import BaseCaching
 
 
-class BasicCache(BaseCaching):
+class FIFOCache(BaseCaching):
     '''
-        A Basic Cache System
+        A FIFO Cache System
     '''
+    def __init__(self):
+        super().__init__()
+        self.queue = deque([])
 
     def put(self, key, item):
         '''
@@ -14,7 +18,13 @@ class BasicCache(BaseCaching):
             the item value for the key key
         '''
         if key and item:
+            if len(self.cache_data) >= BaseCaching.MAX_ITEMS\
+                    and key not in self.queue:
+                discard_key = self.queue.popleft()
+                del self.cache_data[discard_key]
+                print('DISCARD: {}'.format(discard_key))
             self.cache_data[key] = item
+            self.queue.append(key)
 
     def get(self, key):
         '''
