@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''LRU Cache'''
+'''
+LRU Cache
+'''
 from collections import deque
 from base_caching import BaseCaching
 
