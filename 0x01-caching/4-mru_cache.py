@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''MRU Cache'''
-from collections import OrderedDict, deque
+from collections import deque
 from base_caching import BaseCaching
 
 
@@ -9,6 +9,9 @@ class MRUCache(BaseCaching):
         A MRU Cache System
     '''
     def __init__(self):
+        '''
+            Initializes
+        '''
         super().__init__()
         self.keys = deque([])
 

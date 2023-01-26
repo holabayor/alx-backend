@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-'''MRU Cache'''
+'''LRU Cache'''
 from collections import OrderedDict, deque
 from base_caching import BaseCaching
 
 
-class MRUCache(BaseCaching):
+class LRUCache(BaseCaching):
     '''
-        A MRU Cache System
+        A LRU Cache System
     '''
     def __init__(self):
+        '''
+            Initializes
+        '''
         super().__init__()
         self.keys = deque([])
 
