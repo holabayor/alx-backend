@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''LRU Cache'''
 from collections import deque
 from base_caching import BaseCaching
