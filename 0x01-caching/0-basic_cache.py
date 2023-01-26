@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-'''Basic Dictionary'''
+'''
+Basic Dictionary
+'''
 from base_caching import BaseCaching
 
 
