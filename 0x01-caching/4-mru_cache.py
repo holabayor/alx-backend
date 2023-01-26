@@ -13,7 +13,7 @@ class MRUCache(BaseCaching):
             Initializes
         '''
         super().__init__()
-        self.keys = deque([])
+        self.keys = []
 
     def put(self, key, item):
         '''

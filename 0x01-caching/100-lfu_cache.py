@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-'''LRU Cache'''
-from collections import deque
+'''LFU Cache'''
+from collections import OrderedDict, deque
 from base_caching import BaseCaching
 
 
-class LRUCache(BaseCaching):
+class LFUCache(BaseCaching):
     '''
-        A LRU Cache System
+        A LFU Cache System
     '''
     def __init__(self):
         '''
