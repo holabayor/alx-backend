@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-'''LFU Cache'''
+'''
+LFU Cache
+'''
 from collections import OrderedDict, deque
 from base_caching import BaseCaching
 
