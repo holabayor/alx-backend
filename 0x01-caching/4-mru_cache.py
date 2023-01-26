@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
-'''MRU Cache'''
-from collections import deque
+#!/usr/bin/python3
+'''
+MRU Cache
+'''
 from base_caching import BaseCaching
 
 
