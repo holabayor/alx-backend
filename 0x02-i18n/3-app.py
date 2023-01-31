@@ -3,7 +3,7 @@
 Basic flask app with babel setup
 '''
 from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask_babel import Babel, _
 
 
 class Config(object):
@@ -33,8 +33,8 @@ def index() -> str:
     '''
         Index page
     '''
-    return render_template('1-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
