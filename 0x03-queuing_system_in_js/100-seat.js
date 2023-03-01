@@ -64,7 +64,9 @@ app.get('/process', async (req, res) => {
   if (availableSeats === 0) {
     reservationEnabled = false;
   } else if (availableSeats >= 0) {
-    
+    queue.process('reserve_seat', (job) => {
+      
+    });
   } else {
     throw new Error('Not enough seats available');
   }
