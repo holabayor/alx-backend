@@ -59,6 +59,8 @@ app.get('/reserve_seat', async (req, res) => {
 
 app.get('/process', async (req, res) => {
   const availableSeats = await getCurrentAvailableSeats();
+  console.log('Here is working');
+  console.log(availableSeats);
   reserveSeat(availableSeats - 1);
 
   if (availableSeats === 0) {
